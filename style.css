@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size:cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+  height: 78vh;
+  border-radius: 50px;
+  color: #0e0c0c;
+  cursor: pointer;
+  flex:.4;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+  margin-top: 5rem;
+  filter: brightness(1) contrast(2);
+}
+
+#panel2.h2{
+  margin-top:20rem;
+}
+
+.bg-main{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-color: rgba(255,255,255,0.2);
+}
+
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  background-color: rgb(226, 212, 13);
+  border-radius: 1rem;
+  padding:0.2rem 2rem;
+  bottom: 4px;
+}
+
+.panel.active {
+  flex: 5;
+  box-shadow: 0 8px 17px;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+ 
+.heading{
+ position:absolute;
+ top: 0.01rem;
+ background-color: rgb(228, 250, 33);
+ border-radius:1rem;
+ font-size: 40px;
+ letter-spacing: 2px;
+ padding: 5px 20px;
+ box-shadow:0 4px 15px rgba(0,0,0,0.8);
+}
+.heading::before{
+  content: "😂";
+}
+
+.heading::after{
+  content: "😂";
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
